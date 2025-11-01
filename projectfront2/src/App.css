@@ -1,0 +1,117 @@
+.register-container
+{
+  width: 300px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+}
+.register-form input{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+
+
+}
+.register-form button{
+  width: 100%;
+  padding: 10px;
+  background-color: #008cff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.button{
+  background-color: blueviolet;
+  border-radius: 8 px;
+  size: 10 px;
+  cursor: pointer;
+  padding: auto;
+  margin: auto;
+
+}
+body
+{
+  background-color:red;
+  
+  
+}
+
+.card >*{
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 15vw;
+  height: auto;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+  transition: transform 0.2s ease-in-out;
+  justify-content: center;
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+
+}
+
+.card:hover>* {
+  transform: scale(1.05);
+}
+
+.card-img >*{
+  width: 60px;
+  height: 60px;
+}
+
+.card-body >*{
+  padding: 15px;
+}
+
+.card-title >*{
+   font-size: 1.5em;
+  font-weight: bold;
+}
+.card > * {
+  display: flex;
+  gap: 20px;
+  justify-content: center;  /* prevent shrinking */
+}
+.app-container{
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.app-background{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg,#ff6ec7,#7873f5,#00eaff,#ff6ec7);
+  background-size: 800% 800%;
+  animation: gradientFlow 25s ease infinite;
+  z-index: -1;
+  
+}
+@keyframes gradientFlow{
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+
+}
+.app-content{
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+

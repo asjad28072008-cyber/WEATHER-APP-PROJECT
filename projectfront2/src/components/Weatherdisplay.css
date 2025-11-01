@@ -1,0 +1,107 @@
+.weather-page{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.weather-default{
+    background: linear-gradient(135deg,#89f7fe,#66a6ff);
+}
+.weather-sunny{
+    background: linear-gradient(135deg,#f6d365,#fda085);
+    animation: sunnyGlow 6s infinite alternate;
+}
+@keyframes sunnyGlow{
+    from {filter: brightness(1);}
+    to {filter: brightness(1.3);}
+}
+.weather-rainy{
+    background: linear-gradient(135deg,#283e51,#485563);
+}
+.weather-rainy::before{
+    content: "";
+    position: absolute;
+    width:200%;
+    height: 200%;
+    background:url("https://www.bing.com/images/search?view=detailV2&ccid=DRbiWvMl&id=B9A5F437B29472E0ACEF0EAF644905375DA5C2B4&thid=OIP.DRbiWvMlnJ8BZiz0s7C6KQHaEK&mediaurl=https%3a%2f%2fimages.ctfassets.net%2fhrltx12pl8hq%2f78mJxuR0S92pbhQ9ecoQ60%2faf7cfb95a6d29e03f4627726598ed32d%2f08-rain_144512114.jpg&exph=450&expw=800&q=rain+.image&simid=608029106725139858&FORM=IRPRST&ck=08746A2D42E6865E5B660317897AEC5A&selectedIndex=26&itb=0") ;
+    animation: rainfall 2s linear infinite;
+}
+@keyframes rainFall{
+    from {transform: translateY(-50px);}
+    to {transform: translateY(50px);}
+}
+.weather-cloudy{
+    background: linear-gradient(135deg,#d7d2cc,#304352);
+}
+.weather-cloudy::before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: url("https://www.bing.com/images/search?view=detailV2&ccid=5vcAde54&id=E8C249E09E801B826C7A6F0FD5753DBEB043877A&thid=OIP.5vcAde54D5et1iOuTo2ougHaE7&mediaurl=https%3a%2f%2fget.pxhere.com%2fphoto%2fsky-cloud-blue-daytime-cumulus-meteorological-phenomenon-atmosphere-azure-calm-sunlight-summer-electric-blue-pattern-world-1610021.jpg&exph=3333&expw=5000&q=cloud.image&simid=607991457055597958&FORM=IRPRST&ck=27509095208FF820C9F55A352712CFD3&selectedIndex=21&itb=0");
+    animation: cloudMove 60s linear infinite;
+}
+@keyframes cloudMove{
+    from {transform: translateX(0);}
+    to {transform: translateX(-100%);}
+}
+.weather-snowy
+{
+    background: linear-gradient(135deg,#83a4d4,#b6fbff);
+}
+.weather-snowy::before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: url("https://www.bing.com/images/search?view=detailV2&ccid=%2bdEE8IiY&id=C68A828ADF9BF002D8F4952490B3FA6951532F02&thid=OIP.-dEE8IiY_MltjPHCNtbKzAHaEK&mediaurl=https%3a%2f%2fwallpaperaccess.com%2ffull%2f1474668.jpg&exph=2160&expw=3840&q=snowfall.image&simid=608022234784940792&FORM=IRPRST&ck=07106670C8D6A4700EEC9ABC2D969864&selectedIndex=1&itb=0");
+    animation: snowFall 8s linear infinite;
+}
+@keyframes snowFall{
+    from {transform: translateY(-50px);}
+    to {transform: translateY(50px);}
+}
+.weather-card{
+    background: rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.5);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1.2s ease-in-out;
+}
+.weather-card h2{
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+.weather-card p{
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+.weather-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    transition: background 1s ease-in-out;
+}
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+    opacity: 0;
+    transform: translateY(0);
+    }
+}

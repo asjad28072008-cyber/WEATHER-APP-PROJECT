@@ -1,0 +1,31 @@
+carousel-container{
+    width:100%;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    padding-top: 5vh;
+
+}
+.carousel-slide{
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+
+}
+.carousel-slide img{
+    width: 70%;
+    height:400px;
+    object-fit: cover;
+    
+
+}
+.carousel-slide h2{
+    position: absolute;
+    bottom:20px;
+    left: 50%;
+    transform: translateX(50%);
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}

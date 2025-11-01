@@ -1,0 +1,112 @@
+
+
+body{
+    background-color: aqua;
+    background-image: url("C:\\Users\Muham\\OneDrive\\Desktop\\CSC Projects\\projectfront2\\public\\project photos 2\\weather1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-attachment: fixed;
+    
+}
+.splash-container{
+    background: linear-gradient(135deg,#89f7fe,#66a6ff);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: ce;
+
+}
+.logo{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+.splash-text{
+
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.opening-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #00111a, #00334d);
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}
+
+.start-btn {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, #0072ff, #0044cc);
+}
+
+/* Background Effects */
+.weather-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Clouds */
+.cloud {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  top: 20%;
+  left: -200px;
+  animation: cloudMove 60s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes cloudMove {
+  from { left: -300px; }
+  to { left: 100vw; }
+}
+
+/* Thunder Effect */
+.thunder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  animation: flash 8s infinite;
+}
+
+@keyframes flash {
+  0%, 97%, 100% { opacity: 0; }
+  98% { opacity: 1; }
+}
